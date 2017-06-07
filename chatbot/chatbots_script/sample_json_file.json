@@ -1,0 +1,66 @@
+{
+	"intents": [{
+      "intent": "list_all_instances",
+      "slots": []
+    }, {
+      "intent": "list_all_run_instances",
+      "slots": []
+    }, {
+		"intent": "list_all_stop_instances",
+		"slots": []
+	}, {
+		"intent": "Stop_instance",
+		"slots": []
+	}, {
+		"intent": "start_instance",
+		"slots": []
+	}, {
+      "intent": "AMAZON.PauseIntent"
+    }, {
+      "intent": "AMAZON.ResumeIntent"
+    }
+	]
+}
+
+
+list_all_instances Get me the list of all the instances in the account
+list_all_instances Fetch the list of all the machines
+list_all_instances list of all machines
+list_all_instances table of all machines
+list_all_instances table of all the instances
+list_all_instances What all instances are there in the account
+list_all_instances Get me the list of all the instances
+
+
+list_all_run_instances Fetch me the list of all the running machines
+list_all_run_instances List of all running instances
+list_all_run_instances List me all the running machines
+list_all_run_instances What all machines are running
+list_all_run_instances What all instances are running
+list_all_run_instances What instances are running
+list_all_run_instances Get me the list of all the running instances
+
+list_all_stop_instances Get me the list of all stopped machines
+list_all_stop_instances I want to get the list of all the stopped instances
+list_all_stop_instances Fetch the list of all shut down machines
+list_all_stop_instances Get me the list of all the powered off machines
+list_all_stop_instances list of all powered down instances
+list_all_stop_instances Fetch me the list of all stopped machines
+list_all_stop_instances Get me the list of all stopped instances
+list_all_stop_instances What all machines are stopped
+list_all_stop_instances What instances are stopped
+list_all_stop_instances Get me the list of all the stoppedinstances
+
+Stop_instance I want to power off these instances
+Stop_instance Stop these instances
+Stop_instance I want to stop these instances
+Stop_instance Power off these machines
+Stop_instance shutdown these instances
+Stop_instance shut down these machines
+Stop_instance What all instances are stopped
+
+
+start_instance I want to start these instances
+start_instance Start these instances
+start_instance Power On these instances
+

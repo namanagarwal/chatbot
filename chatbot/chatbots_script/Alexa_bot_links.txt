@@ -1,0 +1,61 @@
+https://aws.amazon.com/blogs/aws/category/amazon-lex/
+https://aws.amazon.com/blogs/ai/integrate-your-amazon-lex-bot-with-any-messaging-service/
+https://github.com/willblaschko/AlexaAndroid
+
+
+
+
+Client ID: 123097689687.187644365511
+Client Secret : aea94d63e66651cb6c01eeb03f87c73a
+Verification Token : 4TETYjNpQpxIfnsrX0uhQW23
+
+PostBack URL :https://channels.lex.us-east-1.amazonaws.com/slack/webhook/b7c0fc59-6b46-4fcd-8216-d968949f4bad
+OAuth URL : https://channels.lex.us-east-1.amazonaws.com/slack/oauth/b7c0fc59-6b46-4fcd-8216-d968949f4bad
+
+
+Alexa Chat Web Client :
+
+http://alexa.amazon.com/spa/index.html#cards
+http://mashable.com/2016/05/28/amazon-alexa-browser/#MksAYvzX1kqk
+https://www.howtogeek.com/243364/how-to-control-your-amazon-echo-from-the-web-instead-of-a-cramped-smartphone-app/
+https://github.com/awslabs/aws-lex-convo-bot-example
+
+https://alexaweb.herokuapp.com/
+https://www.google.co.in/search?q=how+to+integrate+lex+with+alexa+web+client&rlz=1C1CHZL_enIN740IN740&oq=how+to+integrate+lex+with+alexa+web+client&aqs=chrome..69i57.9159j0j7&sourceid=chrome&ie=UTF-8
+https://masterofcode.com/blog/amazon-lex
+https://aws.amazon.com/cognito/?nc1=h_ls
+https://github.com/sammachin/alexaweb
+http://sammachin.com/hacks-and-projects/alexa-in-the-browser/
+http://alexa.amazon.com/spa/index.html#cards
+
+
+https://github.com/alexa/alexa-avs-sample-app
+https://developer.android.com/studio/install.html
+https://developer.amazon.com/edw/home.html#/skills
+https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/getting-started-guide
+https://www.amazon.com/gp/help/customer/display.html?nodeId=201602060
+https://developer.amazon.com/public/solutions/alexa/alexa-voice-service/docs/reference-implementation-guide
+https://developer.amazon.com/edw/home.html#/
+https://developer.amazon.com/blogs/post/Tx3CX1ETRZZ2NPC/Alexa-Account-Linking-5-Steps-to-Seamlessly-Link-Your-Alexa-Skill-with-Login-wit
+
+http://stackoverflow.com/questions/43696952/difference-between-amazon-lex-polly-vs-alexa-voice-services-alexa-skill-k
+http://stackoverflow.com/questions/39570520/chatbot-for-amazon-alexa
+http://moduscreate.com/build-an-alexa-skill-with-python-and-aws-lambda/
+https://github.com/ModusCreateOrg/alexa-skill-demo
+https://github.com/ModusCreateOrg/alexa-skill-demo
+
+https://github.com/ModusCreateOrg/alexa-skill-demo/blob/master/sample_utterances.txt
+https://github.com/ModusCreateOrg/alexa-skill-demo/blob/master/lambda_function.py
+https://docs.api.ai/docs/alexa-integration
+
+
+
+
+https://developer.amazon.com/edw/home.html#/
+username : naman.agarwal@quantiphi.com
+password: Naman@321
+
+
+
+
+https://console.aws.amazon.com/cognito/users/?region=us-east-1#/pool/new/clients?_k=3cexw1

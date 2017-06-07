@@ -1,0 +1,162 @@
+import json
+import datetime
+import time
+import os
+import dateutil.parser
+import logging
+import boto3
+
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+
+
+def list_all_instances(intent_request):
+	instances = ec2.instances.filter(
+	Filters=[{'Name': 'instance-state-name', 'Values': ['running']}])
+	for instance in instances:
+		print (instance.id, instance.instance_type, instance.state)
+	return close(
+        session_attributes,
+        'Fulfilled',
+        {
+            'contentType': 'PlainText',
+            'content': 'Thanks, I have placed your reservation.   Please let me know if you would like to book a car '
+                       'rental, or another hotel.'
+        }
+    )
+
+# Listing all the running instances	
+	
+def list_all_run_instances(intent_request):
+	instances = ec2.instances.filter(
+    Filters=[{'Name': 'instance-state-name', 'Values': ['running']}])
+    for instance in instances:
+        print (instance.id, instance.instance_type, instance.state)
+	return close(
+        'Fulfilled',
+        {
+            'contentType': 'PlainText',
+            'content': 'Thanks! The following is the list of details of the Instances as requested.'
+                        + '\n Instance ID: '+instance.id    
+                        + '\n Instance State: '+ instance.state
+        }
+    )
+# Listing all the stopped instances
+
+def list_all_stop_instances(intent_request):
+	instances = ec2.instances.filter(
+    Filters=[{'Name': 'instance-state-name', 'Values': ['stopped']}])
+    for instance in instances:
+        print (instance.id, instance.instance_type, instance.state)
+	return close(
+        'Fulfilled',
+        {
+            'contentType': 'PlainText',
+            'content': 'Thanks! The following is the list of details of the Instances as requested.'
+                        + '\n Instance ID: '+instance.id    
+                        + '\n Instance State: '+ instance.state
+        }
+    )
+	
+def create_instance(intent_request):
+	instances = ec2.instances.filter(
+    Filters=[{'Name': 'instance-state-name', 'Values': ['running']}])
+    for instance in instances:
+        print (instance.id, instance.instance_type, instance.state)
+	return close(
+        'Fulfilled',
+        {
+            'contentType': 'PlainText',
+            'content': 'Thanks! The following is the list of details of the Instances as requested.'
+                        + '\n Instance ID: '+instance.id    
+                        + '\n Instance State: '+ instance.state
+        }
+    )
+	
+# Stop an Instance
+	
+def stop_instance(intent_request):
+	instances = ec2.instances.filter(
+    Filters=[{'Name': 'instance-state-name', 'Values': ['running']}])
+    for instance in instances:
+        print (instance.id, instance.instance_type, instance.state)
+	return close(
+        'Fulfilled',
+        {
+            'contentType': 'PlainText',
+            'content': 'Thanks! The following is the list of details of the Instances as requested.'
+                        + '\n Instance ID: '+instance.id    
+                        + '\n Instance State: '+ instance.state
+        }
+    )
+	
+# Terminate an Instance
+	
+def terminate_instance(intent_request):
+	instances = ec2.instances.filter(
+    Filters=[{'Name': 'instance-state-name', 'Values': ['running']}])
+    for instance in instances:
+        print (instance.id, instance.instance_type, instance.state)
+	return close(
+        'Fulfilled',
+        {
+            'contentType': 'PlainText',
+            'content': 'Thanks! The following is the list of details of the Instances as requested.'
+                        + '\n Instance ID: '+instance.id    
+                        + '\n Instance State: '+ instance.state
+        }
+    )
+
+def close(fulfillment_state, message):
+    response = {
+        'dialogAction': {
+            'type': 'Close',
+            'fulfillmentState': fulfillment_state,
+            'message': message
+        }
+    }
+    return response
+
+
+def dispatch(intent_request):
+    """
+    Called when the user specifies an intent for this bot.
+    """
+
+    logger.debug('dispatch userId={}, intentName={}'.format(intent_request['userId'], intent_request['currentIntent']['name']))
+
+    intent_name = intent_request['currentIntent']['name']
+	
+    # Dispatch to your bot's intent handlers
+    if intent_name == 'list_all_instances':
+        return list_all_instances(intent_request)
+    elif intent_name == 'list_all_run_instances':
+        return list_all_run_instances(intent_request)
+	elif intent_name == 'list_all_stop_instances':
+		return list_all_stop_instances(intent_request)
+	elif intent_name == 'create_instance':
+        return create_instance(intent_request)
+	elif intent_name == 'stop_instance':
+        return stop_instance(intent_request)
+	elif intent_name == 'terminate_instance':
+        return terminate_instance(intent_request)
+
+#raise Exception('Intent with name ' + intent_name + ' not supported with the Current Release')
+
+
+# --- Main handler ---
+
+
+def lambda_handler(event, context):
+    """
+    Route the incoming request based on intent.
+    The JSON body of the request is provided in the event slot.
+    """
+    # By default, treat the user request as coming from the America/New_York time zone.
+    os.environ['TZ'] = 'America/New_York'
+    time.tzset()
+	ec2 = boto3.resource('ec2')
+
+    logger.debug('event.bot.name={}'.format(event['bot']['name']))
+
+    return dispatch(event)

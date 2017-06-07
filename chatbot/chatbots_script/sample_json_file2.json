@@ -1,0 +1,36 @@
+{
+	"intents": [{
+      "intent": "AMAZON.list_all_instances",
+      "slots": []
+    }, {
+      "intent": "AMAZON.list_all_run_instances",
+      "slots": []
+    }, {
+		"intent": "AMAZON.list_all_stop_instances",
+		"slots": []
+	}, {
+		"intent": "AMAZON.Stop_instance",
+		"slots": []
+	}, {
+		"intent": "AMAZON.start_instance",
+		"slots": []
+	}, {
+		"intent": "DescriptionIntent",
+		 "slots": [
+        {
+          "name": "Description",
+          "type": "descriptionType"
+        }]
+	}]
+}
+
+{
+  "intents": [
+    {
+      "intent": "AMAZON.PauseIntent"
+    },
+    {
+      "intent": "AMAZON.ResumeIntent"
+    }
+  ]
+}
