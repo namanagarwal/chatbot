@@ -29,9 +29,9 @@ ambariUser = "admin"
 ambariPass = "admin"
 
 
-server = 'chatbottestdb.cniw8p6tx7sx.us-east-1.rds.amazonaws.com'
-user = 'shubhamkackar'
-password = 'arsenal1994'
+server = 'chatbottestdb.xxxxxxxx.xx-xxxx-1.rds.amazonaws.com'
+user = 'xxxxxxxxxxxxx'
+password = 'xxxxxxxx'
 
 #----------------------------------AWS Pricing List for CSV -----------------------------------------------
 
